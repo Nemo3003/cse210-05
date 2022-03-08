@@ -1,4 +1,4 @@
-from store import constants
+import constants
 from game.scripting.action import Action
 from game.shared.point import Point
 from game.services.keyboard_service import KeyboardService

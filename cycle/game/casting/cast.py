@@ -1,6 +1,3 @@
-from game.casting.actor import Actor
-
-
 class Cast:
     """A collection of actors.
 
@@ -76,4 +73,3 @@ class Cast:
         """
         if group in self._actors:
             self._actors[group].remove(actor)
-#Sorry about giving so much detail...I love doing so!

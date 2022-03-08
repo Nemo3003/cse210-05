@@ -1,4 +1,4 @@
-from store import constants
+import constants
 
 from game.casting.cast import Cast
 from game.casting.food import Food

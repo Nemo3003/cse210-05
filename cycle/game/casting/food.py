@@ -1,5 +1,5 @@
 import random
-from store import constants
+import constants
 from game.casting.actor import Actor
 from game.shared.point import Point
 
@@ -10,7 +10,7 @@ class Food(Actor):
         "Constructs a new Food."
         super().__init__()
         self._points = 0
-        self.set_text("Group 4 - CSE210")
+        self.set_text("$")
         self.set_color(constants.RED)
         self.reset()
         
