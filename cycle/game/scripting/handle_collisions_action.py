@@ -1,4 +1,4 @@
-from store import constants
+import constants
 from game.casting.actor import Actor
 from game.scripting.action import Action
 from game.shared.point import Point
@@ -41,7 +41,7 @@ class HandleCollisionsAction(Action):
         snake = cast.get_first_actor("snakes")
         head = snake.get_head()
 
-        if head.get_position() == (food.get_position()):
+        if head.get_position().equals(food.get_position()):
             points = food.get_points()
             snake.grow_tail(points)
             score.add_points(points)
@@ -56,10 +56,21 @@ class HandleCollisionsAction(Action):
         snake = cast.get_first_actor("snakes")
         head = snake.get_segments()[0]
         segments = snake.get_segments()[1:]
+
+        snake2 = cast.get_first_actor("snakes")
+        head2 = snake2.get_segments()[0]
+        segments2 = snake2.get_segments()[1:]
         
         for segment in segments:
-            if head.get_position()==(segment.get_position()):
+            if head.get_position().equals(segment.get_position()):
                 self._is_game_over = True
+                
+        for segment in segments2:
+            if head2.get_position().equals(segment.get_position()):
+                self._is_game_over = True
+
+        
+
         
     def _handle_game_over(self, cast):
         """Shows the 'game over' message and turns the snake and food white if the game is over.
