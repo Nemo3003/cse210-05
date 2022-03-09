@@ -41,3 +41,4 @@ class Score(Actor):
         #But we won't have points...it is nice to have it tho...
         self._points += points
         self.set_text(f"Give us a good grade, pleasee! :D")
+    

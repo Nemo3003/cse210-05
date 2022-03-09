@@ -1,18 +1,17 @@
 import pyray
 from game.shared.point import Point
 
-
-class KeyboardService:
-    """Detects player input. 
+"""Detects player input. 
     
     The responsibility of a KeyboardService is to indicate whether or not a key is up or down.
 
-    Attributes:
-        _keys (Dict[string, int]): The letter to key mapping.
+  
     """
-
+class KeyboardService:
+    
+#Constructs a new KeyboardService.
     def __init__(self):
-        """Constructs a new KeyboardService."""
+        
         self._keys = {}
         
         self._keys['w'] = pyray.KEY_W

@@ -1,21 +1,18 @@
 import constants
 from game.casting.actor import Actor
 from game.shared.point import Point
-
+"""
+    This is the first player ::)
+    
+    Here we construct the snake. movements, head, tail, segments, everything's here
+    """
 
 class Snake(Actor):
-    """
-    A long limbless reptile.
     
-    The responsibility of Snake is to move itself.
-
-    Attributes:
-        _points (int): The number of points the food is worth.
-    """
     def __init__(self):
         super().__init__()
         self._segments = []
-        self._prepare_body()
+        self.prepare_body()
 
     def get_segments(self):
         return self._segments
@@ -51,9 +48,9 @@ class Snake(Actor):
     def turn_head(self, velocity):
         self._segments[0].set_velocity(velocity)
     
-    def _prepare_body(self):
-        x = int(constants.MAX_X / 3)
-        y = int(constants.MAX_Y / 3)
+    def prepare_body(self):
+        x = int(constants.MAX_X / 2)
+        y = int(constants.MAX_Y / 10)
 
         for i in range(constants.SNAKE_LENGTH):
             position = Point(x - i * constants.CELL_SIZE, y)

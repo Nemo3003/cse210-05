@@ -1,6 +1,6 @@
 from game.shared.color import Color
 
-"""All colors and different constants are here"""
+#All colors and different constants are here
 #TODO: I still want to make the color a choice to the user
 COLUMNS = 40
 ROWS = 20
