@@ -1,6 +1,24 @@
 from game.casting.actor import Actor
+import time
+  
+# define the countdown func.
+def countdown(t):
+    
+    while t:
+        mins, secs = divmod(t, 60)
+        timer = '{:02d}:{:02d}'.format(mins, secs)
+        print(timer, end="\r")
+        time.sleep(1)
+        t -= 1
 
+  
+  
+# input time in seconds
+t = 5
+  
+# function call
 
+COUNTDOWN = countdown(int(t))
 class Score(Actor):
     """
     A record of points made or lost. 
@@ -12,6 +30,7 @@ class Score(Actor):
     Attributes:
         _points (int): The points earned in the game.
     """
+    
     def __init__(self):
         super().__init__()
         self._points = 0
