@@ -15,7 +15,7 @@ class Food(Actor):
     def __init__(self):
         super().__init__()
         self._points = 0
-        self.set_text("@")
+        self.set_text("")
         self.set_color(constants.RED)
         self.reset()
     #Selects a random position and points that the food is worth.

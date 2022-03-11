@@ -24,24 +24,13 @@ class HandleCollisionsAction(Action):
 #Updates the score nd moves the food if the snake collides with the food.
     def food_collision(self, cast):
         
-        score = cast.get_first_actor("scores")
-        food = cast.get_first_actor("foods")
+        
         snake = cast.get_first_actor("snakes")
         snake2 = cast.get_first_actor("snake_red")
-        head2 = snake2.get_head()
-        head = snake.get_head()
-
-        if head.get_position().equals(food.get_position()):
-            points = food.get_points()
-            snake.grow_tail(points)
-            score.add_points(points)
-            food.reset()
         
-        elif head2.get_position().equals(food.get_position()):
-            points = food.get_points()
-            snake2.grow_tail(points)
-            score.add_points(points)
-            food.reset()
+        snake.grow_tail(1)
+        snake2.grow_tail(1)
+
 #Sets the game over flag if the snake collides with one of its segments
     def segment_collision(self, cast):
        
