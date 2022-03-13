@@ -9,3 +9,11 @@
 - A "game over" message is displayed in the middle of the screen.
 - The cycles turn white.
 - Players keep moving and turning but don't run into each other.
+
+To play please enter into the cycle folder and run from the __main__.py file. 
+
+Cycopath
+  -Noun-
+  A person suffering from chronic bike riding disorder with abnormal urges o ride.    
+  
+ Enjoy!
